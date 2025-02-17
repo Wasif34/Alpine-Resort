@@ -26,7 +26,7 @@ function UserAvatar() {
   console.log("Acat", user);
   return (
     <StyledUserAvatar>
-      <Avatar src={user?.avatar || "src/data/img/default-user.jpg"} />
+      <Avatar src={user?.avatar || "/default-user.jpg"} />
 
       <span>{user?.user_metadata.fullName}</span>
     </StyledUserAvatar>

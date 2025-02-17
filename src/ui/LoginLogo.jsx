@@ -16,7 +16,7 @@ const LoginDiv = styled.div`
 function LoginLogo() {
   return (
     <LoginDiv>
-      <Img src="src/data/img/mobile-login.svg" alt="Logo" />
+      <Img src="/mobile-login.svg" alt="Logo" />
     </LoginDiv>
   );
 }
