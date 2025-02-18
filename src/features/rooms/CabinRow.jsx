@@ -1,19 +1,14 @@
 /* eslint-disable react/prop-types */
 import styled from "styled-components";
-import differenceInDays from "date-fns/differenceInDays";
-import { useMutation } from "@tanstack/react-query";
-import { deleteRoom } from "../../services/apiRooms";
-import { useQueryClient } from "@tanstack/react-query";
-import toast from "react-hot-toast";
 import { useState } from "react";
-import CreateCabinForm from "./CreateCabinForm";
+import CreateRoomForm from "./CreateRoomForm";
 import { useDeleteCabin } from "../../hooks/useDeleteCabin";
 import Modal from "../../ui/Modal";
 import ConfirmDelete from "../../ui/ConfirmDelete";
 import Table from "../../ui/Table";
 import Menus from "../../ui/Menus";
 import { HiEye, HiPencil, HiTrash } from "react-icons/hi2";
-import ViewCabin from "./ViewCabin";
+import ViewRoom from "./ViewRoom";
 
 // const TableRow = styled.div`
 //   display: grid;
@@ -61,7 +56,7 @@ const NoDiscount = styled.div`
   color: var(--color-red-700);
 `;
 // eslint-disable-next-line react/prop-types
-export default function CabinRow({ room }) {
+export default function RoomRow({ room }) {
   const [edit, setEdit] = useState(false);
   const [viewRoom, setViewRoom] = useState(false);
   const [deleteButton, setDeleteButton] = useState(false);
@@ -119,7 +114,7 @@ export default function CabinRow({ room }) {
       </Table.Row>
       {edit && (
         <Modal onClose={() => setEdit(false)}>
-          <CreateCabinForm
+          <CreateRoomForm
             room={room}
             onCloseModal={setEdit}
             setEdit={setEdit}
@@ -128,7 +123,7 @@ export default function CabinRow({ room }) {
       )}
       {viewRoom && (
         <Modal onClose={() => setViewRoom(false)}>
-          <ViewCabin room={room} onCloseModal={setViewRoom} />
+          <ViewRoom room={room} onCloseModal={setViewRoom} />
         </Modal>
       )}
     </>

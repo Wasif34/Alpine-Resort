@@ -6,7 +6,6 @@ import { BiFridge } from "react-icons/bi";
 import { MdCleaningServices, MdBedroomChild } from "react-icons/md";
 import { HiArrowSmallDown, HiOutlineCurrencyDollar } from "react-icons/hi2";
 import Button from "../../ui/Button";
-import { useRoomBooking } from "../../hooks/useRoomBooking";
 import { useQuery } from "@tanstack/react-query";
 import { getRoomBooking } from "../../services/apiBookings";
 import { useState } from "react";
@@ -59,7 +58,7 @@ const ScrollContainer = styled.div`
   /* Optional: Adds a border */
 `;
 
-function ViewCabin({ room }) {
+function ViewRoom({ room }) {
   const [fetchBooking, setFetchBooking] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -168,4 +167,4 @@ function ViewCabin({ room }) {
   );
 }
 
-export default ViewCabin;
+export default ViewRoom;

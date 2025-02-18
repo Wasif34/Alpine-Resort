@@ -1,6 +1,3 @@
-import { useQuery } from "@tanstack/react-query";
-import styled from "styled-components";
-import { getRooms } from "../../services/apiRooms";
 import Spinner from "../../ui/Spinner";
 import CabinRow from "./CabinRow";
 import { useRooms } from "../../hooks/useRooms";
@@ -23,7 +20,7 @@ import { useSearchParams } from "react-router-dom";
 //   padding: 1.6rem 2.4rem;
 // `;
 
-function CabinTable() {
+function RoomTable() {
   const { isLoading, error, rooms } = useRooms();
   const [searchParams] = useSearchParams();
 
@@ -83,4 +80,4 @@ function CabinTable() {
   );
 }
 
-export default CabinTable;
+export default RoomTable;

@@ -11,7 +11,7 @@ import FormRow from "../../ui/FormRow";
 import { useUpdateRoom } from "../../hooks/useUpdateRoom";
 import { useCreateRoom } from "../../hooks/useCreateRoom";
 
-function CreateCabinForm({ room = {}, onCloseModal }) {
+function CreateRoomForm({ room = {}, onCloseModal }) {
   const { id: editId, ...data } = room;
 
   const isEdit = Boolean(editId);
@@ -158,4 +158,4 @@ function CreateCabinForm({ room = {}, onCloseModal }) {
   );
 }
 
-export default CreateCabinForm;
+export default CreateRoomForm;

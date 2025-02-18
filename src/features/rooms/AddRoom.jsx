@@ -1,9 +1,9 @@
 import { useState } from "react";
-import CreateCabinForm from "./CreateCabinForm";
+import CreateCabinForm from "./CreateRoomForm";
 import Button from "../../ui/Button";
 import Modal from "../../ui/Modal";
 
-function AddCabin() {
+function AddRoom() {
   const [isOpenModal, setisOpenModal] = useState(false);
 
   return (
@@ -22,4 +22,4 @@ function AddCabin() {
   );
 }
 
-export default AddCabin;
+export default AddRoom;
